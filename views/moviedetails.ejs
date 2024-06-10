@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= movie ? movie.Title : 'Movie Not Found' %></title>
+    <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <% if (movie) { %>
+            <h1><%= movie.Title %> (<%= movie.Year %>)</h1>
+            <img src="<%= movie.Poster %>" alt="<%= movie.Title %> Poster">
+            <p><strong>Released:</strong> <%= movie.Released %></p>
+            <p><strong>Runtime:</strong> <%= movie.Runtime %></p>
+            <p><strong>Director:</strong> <%= movie.Director %></p>
+            <p><strong>Actors:</strong> <%= movie.Actors %></p>
+            <p><strong>IMDB Rating:</strong> <%= movie.imdbRating %></p>
+        <% } else { %>
+            <h1>Movie Not Found</h1>
+            <p>Sorry, we couldn't find the movie you were looking for. Please try again with a different title.</p>
+        <% } %>
+    </div>
+</body>
+</html>

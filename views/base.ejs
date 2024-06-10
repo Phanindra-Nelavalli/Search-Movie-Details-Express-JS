@@ -1,0 +1,97 @@
+<%-include('header')-%>
+<header>
+    <nav>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Contact</a>
+    </nav>
+    <form action="" class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class='bx bx-search-alt'></i></button>
+    </form>
+</header>
+<div class="background"></div>
+<div class="container">
+    <div class="content">
+        <h2 class="logo"><i class='bx bxl-firebase'></i> Login System</h2>
+        <div class="text-sci">
+            <h2>Welcome!<br><span>To Our New Website</span></h2>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+
+            <div class="social-icons">
+                <a href=""><i class='bx bxl-linkedin' ></i></a>
+                <a href=""><i class='bx bxl-facebook-circle' ></i></a>
+                <a href=""><i class='bx bxl-instagram' ></i></a>
+                <a href=""><i class='bx bxl-twitter' ></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="logreg-box">
+        <div class="form-box login">
+            <form action="/route/login" method="POST">
+                <h2>Sign In</h2>
+
+                <div class="input-box">
+                    <span class="icons"><i class='bx bx-envelope'></i></span>
+                    <input type="email" name="Email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icons"><i class='bx bx-lock-alt' ></i></span>
+                    <input type="password" name="Password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember Me</label>
+                    <a href="#">Forgot Password</a>
+                </div>
+
+                <button type="submit" class="btn">Sign In</button>
+
+                <div class="login-register">
+                    <p>Don't have a account?<a href="#" class="register-link"> Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box register">
+            <form action="/route/sign-up" method="POST">
+                <h2>Sign Up</h2>
+
+                <div class="input-box">
+                    <span class="icons"><i class='bx bx-user'></i></span>
+                    <input type="text" name="Name" required>
+                    <label>Name</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icons"><i class='bx bx-envelope'></i></span>
+                    <input type="email" name="Email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icons"><i class='bx bx-lock-alt' ></i></span>
+                    <input type="password" name="Password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> I agree to the terms & Conditions</label>
+                    
+                </div>
+
+                <button type="submit" class="btn">Sign Up</button>
+
+                <div class="login-register">
+                    <p>Already have a account?<a href="#" class="login-link"> Sign In</a></p>
+                </div>
+            </form>
+    </div>
+</div>
+<script src="/static/login.js"></script>
+<%-include('footer')-%>

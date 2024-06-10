@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Movie Details</title>
+    <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+    <div class="greeting">
+        <% if (userName) { %>
+            <p style="font-size: 50px;"><%= greeting %> <br> <%= userName %>!</p>
+        <% } else { %>
+            <p><a href="/login">Login</a></p>
+        <% } %>
+    </div>
+    <div class="container">
+        <h1>Search Movie Details</h1>
+        <form action="/search" method="POST">
+            <input type="text" name="movieTitle" placeholder="Enter movie title" required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>
